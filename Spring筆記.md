@@ -100,7 +100,7 @@ Spring Data JPA 通過自定義的 Repository 介面繼承 JpaRepository 內基�
 
 ## [CrudRepository](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html) (非常重要!!!)
 
-<S entends T> S save (S entity)：若 ID 為 null 或 ID 不存在資料庫則新增，否則修改。
+`<S entends T>` S save (S entity)：若 ID 為 null 或 ID 不存在資料庫則新增，否則修改。
 
 boolean existsById(ID id)：檢查資料是否存在。
 
@@ -128,7 +128,7 @@ List<T> findall()：return type difference。
 
 void flush()：把修改傳送到資料庫。
 
-<S extends T> S saveAndFlush (S entity)：save + flush
+`<S extends T> S saveAndFlush (S entity)`:save + flush
 
 T getReferenceById(ID id)：使用 PK 找到一筆資料，存在的情況使用 lazy loading，不存在則丟出 EntityNotFoundException。
 
